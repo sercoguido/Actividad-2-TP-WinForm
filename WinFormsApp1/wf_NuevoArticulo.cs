@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace WinFormsApp1
+namespace GestionCatalogo
 {
-    public partial class Nuevo_Articulo : Form
+    public partial class wf_NuevoArticulo : Form
     {
-        public Nuevo_Articulo()
+        public wf_NuevoArticulo()
         {
             InitializeComponent();
         }

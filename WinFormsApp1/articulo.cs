@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace WinFormsApp1
+namespace GestionCatalogo
 {
     internal class articulo
     {
