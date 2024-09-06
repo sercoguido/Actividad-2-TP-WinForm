@@ -60,13 +60,14 @@
             // 
             // btnAgregar
             // 
+            btnAgregar.BackColor = Color.MediumSeaGreen;
             btnAgregar.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregar.Location = new Point(419, 393);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(123, 46);
             btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += btnAgregar_Click;
             // 
             // txt_Nombre

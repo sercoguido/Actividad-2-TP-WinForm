@@ -32,15 +32,15 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             button1 = new Button();
-            button2 = new Button();
             btn_AgregarArticulo = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            button5 = new Button();
-            button6 = new Button();
+            btn_EliminarArticulo = new Button();
+            btn_ModificarArticulo = new Button();
             button4 = new Button();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            btn_DetallesArticulos = new Button();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -89,19 +89,6 @@
             button1.Text = "Busqueda";
             button1.UseVisualStyleBackColor = false;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.White;
-            button2.FlatAppearance.BorderColor = Color.DarkGray;
-            button2.FlatAppearance.BorderSize = 2;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(21, 301);
-            button2.Name = "button2";
-            button2.Size = new Size(504, 109);
-            button2.TabIndex = 3;
-            button2.Text = "Detalle";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // btn_AgregarArticulo
             // 
             btn_AgregarArticulo.BackColor = Color.MediumSeaGreen;
@@ -128,25 +115,27 @@
             toolStripStatusLabel1.Size = new Size(118, 17);
             toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // button5
+            // btn_EliminarArticulo
             // 
-            button5.BackColor = Color.Tomato;
-            button5.Location = new Point(127, 34);
-            button5.Name = "button5";
-            button5.Size = new Size(116, 110);
-            button5.TabIndex = 7;
-            button5.Text = "Eliminar";
-            button5.UseVisualStyleBackColor = false;
+            btn_EliminarArticulo.BackColor = Color.Tomato;
+            btn_EliminarArticulo.Location = new Point(127, 34);
+            btn_EliminarArticulo.Name = "btn_EliminarArticulo";
+            btn_EliminarArticulo.Size = new Size(116, 110);
+            btn_EliminarArticulo.TabIndex = 7;
+            btn_EliminarArticulo.Text = "Eliminar";
+            btn_EliminarArticulo.UseVisualStyleBackColor = false;
+            btn_EliminarArticulo.Click += btn_EliminarArticulo_Click_1;
             // 
-            // button6
+            // btn_ModificarArticulo
             // 
-            button6.BackColor = Color.DeepSkyBlue;
-            button6.Location = new Point(249, 34);
-            button6.Name = "button6";
-            button6.Size = new Size(116, 110);
-            button6.TabIndex = 8;
-            button6.Text = "Modificar";
-            button6.UseVisualStyleBackColor = false;
+            btn_ModificarArticulo.BackColor = Color.DeepSkyBlue;
+            btn_ModificarArticulo.Location = new Point(249, 34);
+            btn_ModificarArticulo.Name = "btn_ModificarArticulo";
+            btn_ModificarArticulo.Size = new Size(116, 110);
+            btn_ModificarArticulo.TabIndex = 8;
+            btn_ModificarArticulo.Text = "Modificar";
+            btn_ModificarArticulo.UseVisualStyleBackColor = false;
+            btn_ModificarArticulo.Click += btn_ModificarArticulo_Click;
             // 
             // button4
             // 
@@ -171,8 +160,8 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(button6);
-            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(btn_ModificarArticulo);
+            groupBox1.Controls.Add(btn_EliminarArticulo);
             groupBox1.Controls.Add(btn_AgregarArticulo);
             groupBox1.Location = new Point(368, 104);
             groupBox1.Name = "groupBox1";
@@ -180,16 +169,25 @@
             groupBox1.TabIndex = 11;
             groupBox1.TabStop = false;
             // 
+            // btn_DetallesArticulos
+            // 
+            btn_DetallesArticulos.Location = new Point(21, 301);
+            btn_DetallesArticulos.Name = "btn_DetallesArticulos";
+            btn_DetallesArticulos.Size = new Size(468, 110);
+            btn_DetallesArticulos.TabIndex = 12;
+            btn_DetallesArticulos.Text = "Detalles";
+            btn_DetallesArticulos.UseVisualStyleBackColor = true;
+            // 
             // wf_Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(756, 505);
+            Controls.Add(btn_DetallesArticulos);
             Controls.Add(groupBox1);
             Controls.Add(button4);
             Controls.Add(statusStrip1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
@@ -203,6 +201,7 @@
             RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestion Catalogo [Inicio]";
+            Load += wf_Inicio_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
@@ -219,14 +218,14 @@
         private ToolStripMenuItem helpToolStripMenuItem;
         private Label label1;
         private Button button1;
-        private Button button2;
         private Button btn_AgregarArticulo;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private Button button5;
-        private Button button6;
+        private Button btn_EliminarArticulo;
+        private Button btn_ModificarArticulo;
         private Button button4;
         private Label label2;
         private GroupBox groupBox1;
+        private Button btn_DetallesArticulos;
     }
 }
