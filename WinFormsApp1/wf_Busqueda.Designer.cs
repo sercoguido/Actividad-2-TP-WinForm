@@ -168,6 +168,8 @@
             Controls.Add(lb_BusquedaCategoria);
             Controls.Add(lb_BusquedaMarca);
             Controls.Add(lv_Busqueda);
+            MaximizeBox = false;
+            MaximumSize = new Size(542, 537);
             Name = "wf_Busqueda";
             StartPosition = FormStartPosition.CenterParent;
             Text = "wf_Busqueda";
