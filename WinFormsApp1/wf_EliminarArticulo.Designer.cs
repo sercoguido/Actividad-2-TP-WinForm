@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lbl_NroArticuloEA = new Label();
             label2 = new Label();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            btn_EliminarEA = new Button();
+            input_NroArticuloEA = new TextBox();
             SuspendLayout();
             // 
-            // label1
+            // lbl_NroArticuloEA
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(47, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(274, 19);
-            label1.TabIndex = 0;
-            label1.Text = "INGRESE EL NUMERO DE ARTICULO";
+            lbl_NroArticuloEA.AutoSize = true;
+            lbl_NroArticuloEA.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_NroArticuloEA.Location = new Point(47, 59);
+            lbl_NroArticuloEA.Name = "lbl_NroArticuloEA";
+            lbl_NroArticuloEA.Size = new Size(274, 19);
+            lbl_NroArticuloEA.TabIndex = 0;
+            lbl_NroArticuloEA.Text = "INGRESE EL NUMERO DE ARTICULO";
             // 
             // label2
             // 
@@ -52,34 +52,34 @@
             label2.Size = new Size(0, 15);
             label2.TabIndex = 1;
             // 
-            // button1
+            // btn_EliminarEA
             // 
-            button1.BackColor = Color.Tomato;
-            button1.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(140, 221);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 36);
-            button1.TabIndex = 2;
-            button1.Text = "ELIMINAR";
-            button1.UseVisualStyleBackColor = false;
+            btn_EliminarEA.BackColor = Color.Tomato;
+            btn_EliminarEA.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_EliminarEA.ForeColor = Color.Black;
+            btn_EliminarEA.Location = new Point(140, 221);
+            btn_EliminarEA.Name = "btn_EliminarEA";
+            btn_EliminarEA.Size = new Size(107, 36);
+            btn_EliminarEA.TabIndex = 2;
+            btn_EliminarEA.Text = "ELIMINAR";
+            btn_EliminarEA.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // input_NroArticuloEA
             // 
-            textBox1.Location = new Point(82, 92);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(209, 23);
-            textBox1.TabIndex = 3;
+            input_NroArticuloEA.Location = new Point(82, 92);
+            input_NroArticuloEA.Name = "input_NroArticuloEA";
+            input_NroArticuloEA.Size = new Size(209, 23);
+            input_NroArticuloEA.TabIndex = 3;
             // 
             // wf_EliminarArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(374, 312);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(input_NroArticuloEA);
+            Controls.Add(btn_EliminarEA);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lbl_NroArticuloEA);
             MaximizeBox = false;
             MaximumSize = new Size(390, 351);
             Name = "wf_EliminarArticulo";
@@ -91,9 +91,9 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbl_NroArticuloEA;
         private Label label2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button btn_EliminarEA;
+        private TextBox input_NroArticuloEA;
     }
 }

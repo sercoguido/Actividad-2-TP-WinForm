@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lbl_NombreNA = new Label();
             btnAgregar = new Button();
-            txt_Nombre = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            listBox1 = new ListBox();
-            listBox2 = new ListBox();
+            input_NombreNA = new TextBox();
+            lbl_NuevoArticulo = new Label();
+            lbl_DescripcionNA = new Label();
+            input_DescripcionNA = new TextBox();
+            lbl_MarcaNA = new Label();
+            lb_MarcaNA = new ListBox();
+            lb_CategoriaNA = new ListBox();
             label5 = new Label();
-            label6 = new Label();
-            textBox2 = new TextBox();
+            lbl_PrecioNA = new Label();
+            input_PrecioNA = new TextBox();
             label7 = new Label();
-            label9 = new Label();
-            textBox3 = new TextBox();
-            label8 = new Label();
-            button1 = new Button();
+            lbl_ImagenNA = new Label();
+            input_CodigoNA = new TextBox();
+            lbl_CodigoNA = new Label();
+            btn_BuscarNA = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lbl_NombreNA
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 9.75F);
-            label1.Location = new Point(56, 114);
-            label1.Name = "label1";
-            label1.Size = new Size(57, 16);
-            label1.TabIndex = 0;
-            label1.Text = "Nombre:";
-            label1.Click += label1_Click;
+            lbl_NombreNA.AutoSize = true;
+            lbl_NombreNA.Font = new Font("Tahoma", 9.75F);
+            lbl_NombreNA.Location = new Point(56, 114);
+            lbl_NombreNA.Name = "lbl_NombreNA";
+            lbl_NombreNA.Size = new Size(57, 16);
+            lbl_NombreNA.TabIndex = 0;
+            lbl_NombreNA.Text = "Nombre:";
+            lbl_NombreNA.Click += label1_Click;
             // 
             // btnAgregar
             // 
@@ -70,79 +70,79 @@
             btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // txt_Nombre
+            // input_NombreNA
             // 
-            txt_Nombre.BackColor = Color.White;
-            txt_Nombre.BorderStyle = BorderStyle.FixedSingle;
-            txt_Nombre.Location = new Point(119, 112);
-            txt_Nombre.Name = "txt_Nombre";
-            txt_Nombre.Size = new Size(423, 23);
-            txt_Nombre.TabIndex = 4;
+            input_NombreNA.BackColor = Color.White;
+            input_NombreNA.BorderStyle = BorderStyle.FixedSingle;
+            input_NombreNA.Location = new Point(119, 112);
+            input_NombreNA.Name = "input_NombreNA";
+            input_NombreNA.Size = new Size(423, 23);
+            input_NombreNA.TabIndex = 4;
             // 
-            // label2
+            // lbl_NuevoArticulo
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13F);
-            label2.Location = new Point(21, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(165, 25);
-            label2.TabIndex = 7;
-            label2.Text = "NUEVO ARTICULO :";
-            label2.Click += label2_Click_1;
+            lbl_NuevoArticulo.AutoSize = true;
+            lbl_NuevoArticulo.Font = new Font("Segoe UI", 13F);
+            lbl_NuevoArticulo.Location = new Point(21, 24);
+            lbl_NuevoArticulo.Name = "lbl_NuevoArticulo";
+            lbl_NuevoArticulo.Size = new Size(165, 25);
+            lbl_NuevoArticulo.TabIndex = 7;
+            lbl_NuevoArticulo.Text = "NUEVO ARTICULO :";
+            lbl_NuevoArticulo.Click += label2_Click_1;
             // 
-            // label3
+            // lbl_DescripcionNA
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Tahoma", 9.75F);
-            label3.Location = new Point(36, 143);
-            label3.Name = "label3";
-            label3.Size = new Size(77, 16);
-            label3.TabIndex = 8;
-            label3.Text = "Descripción:";
+            lbl_DescripcionNA.AutoSize = true;
+            lbl_DescripcionNA.Font = new Font("Tahoma", 9.75F);
+            lbl_DescripcionNA.Location = new Point(36, 143);
+            lbl_DescripcionNA.Name = "lbl_DescripcionNA";
+            lbl_DescripcionNA.Size = new Size(77, 16);
+            lbl_DescripcionNA.TabIndex = 8;
+            lbl_DescripcionNA.Text = "Descripción:";
             // 
-            // textBox1
+            // input_DescripcionNA
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(119, 141);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(423, 86);
-            textBox1.TabIndex = 9;
+            input_DescripcionNA.BackColor = Color.White;
+            input_DescripcionNA.BorderStyle = BorderStyle.FixedSingle;
+            input_DescripcionNA.Location = new Point(119, 141);
+            input_DescripcionNA.Multiline = true;
+            input_DescripcionNA.Name = "input_DescripcionNA";
+            input_DescripcionNA.Size = new Size(423, 86);
+            input_DescripcionNA.TabIndex = 9;
             // 
-            // label4
+            // lbl_MarcaNA
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Tahoma", 9.75F);
-            label4.Location = new Point(66, 246);
-            label4.Name = "label4";
-            label4.Size = new Size(47, 16);
-            label4.TabIndex = 10;
-            label4.Text = "Marca:";
-            label4.Click += label4_Click;
+            lbl_MarcaNA.AutoSize = true;
+            lbl_MarcaNA.Font = new Font("Tahoma", 9.75F);
+            lbl_MarcaNA.Location = new Point(66, 246);
+            lbl_MarcaNA.Name = "lbl_MarcaNA";
+            lbl_MarcaNA.Size = new Size(47, 16);
+            lbl_MarcaNA.TabIndex = 10;
+            lbl_MarcaNA.Text = "Marca:";
+            lbl_MarcaNA.Click += label4_Click;
             // 
-            // listBox1
+            // lb_MarcaNA
             // 
-            listBox1.BackColor = Color.White;
-            listBox1.BorderStyle = BorderStyle.FixedSingle;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(119, 245);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(166, 17);
-            listBox1.TabIndex = 11;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            lb_MarcaNA.BackColor = Color.White;
+            lb_MarcaNA.BorderStyle = BorderStyle.FixedSingle;
+            lb_MarcaNA.FormattingEnabled = true;
+            lb_MarcaNA.ItemHeight = 15;
+            lb_MarcaNA.Location = new Point(119, 245);
+            lb_MarcaNA.Name = "lb_MarcaNA";
+            lb_MarcaNA.Size = new Size(166, 17);
+            lb_MarcaNA.TabIndex = 11;
+            lb_MarcaNA.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // listBox2
+            // lb_CategoriaNA
             // 
-            listBox2.BackColor = Color.White;
-            listBox2.BorderStyle = BorderStyle.FixedSingle;
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(366, 246);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(176, 17);
-            listBox2.TabIndex = 13;
+            lb_CategoriaNA.BackColor = Color.White;
+            lb_CategoriaNA.BorderStyle = BorderStyle.FixedSingle;
+            lb_CategoriaNA.FormattingEnabled = true;
+            lb_CategoriaNA.ItemHeight = 15;
+            lb_CategoriaNA.Location = new Point(366, 246);
+            lb_CategoriaNA.Name = "lb_CategoriaNA";
+            lb_CategoriaNA.Size = new Size(176, 17);
+            lb_CategoriaNA.TabIndex = 13;
             // 
             // label5
             // 
@@ -154,26 +154,26 @@
             label5.TabIndex = 12;
             label5.Text = "Categoria:";
             // 
-            // label6
+            // lbl_PrecioNA
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Tahoma", 9.75F);
-            label6.Location = new Point(66, 333);
-            label6.Name = "label6";
-            label6.Size = new Size(47, 16);
-            label6.TabIndex = 14;
-            label6.Text = "Precio:";
-            label6.Click += label6_Click;
+            lbl_PrecioNA.AutoSize = true;
+            lbl_PrecioNA.Font = new Font("Tahoma", 9.75F);
+            lbl_PrecioNA.Location = new Point(66, 333);
+            lbl_PrecioNA.Name = "lbl_PrecioNA";
+            lbl_PrecioNA.Size = new Size(47, 16);
+            lbl_PrecioNA.TabIndex = 14;
+            lbl_PrecioNA.Text = "Precio:";
+            lbl_PrecioNA.Click += label6_Click;
             // 
-            // textBox2
+            // input_PrecioNA
             // 
-            textBox2.BackColor = SystemColors.Control;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(119, 330);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 22);
-            textBox2.TabIndex = 15;
+            input_PrecioNA.BackColor = SystemColors.Control;
+            input_PrecioNA.BorderStyle = BorderStyle.FixedSingle;
+            input_PrecioNA.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            input_PrecioNA.Location = new Point(119, 330);
+            input_PrecioNA.Name = "input_PrecioNA";
+            input_PrecioNA.Size = new Size(166, 22);
+            input_PrecioNA.TabIndex = 15;
             // 
             // label7
             // 
@@ -183,70 +183,70 @@
             label7.Size = new Size(0, 15);
             label7.TabIndex = 16;
             // 
-            // label9
+            // lbl_ImagenNA
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Tahoma", 9.75F);
-            label9.Location = new Point(62, 285);
-            label9.Name = "label9";
-            label9.Size = new Size(55, 16);
-            label9.TabIndex = 17;
-            label9.Text = "Imagen:";
+            lbl_ImagenNA.AutoSize = true;
+            lbl_ImagenNA.Font = new Font("Tahoma", 9.75F);
+            lbl_ImagenNA.Location = new Point(62, 285);
+            lbl_ImagenNA.Name = "lbl_ImagenNA";
+            lbl_ImagenNA.Size = new Size(55, 16);
+            lbl_ImagenNA.TabIndex = 17;
+            lbl_ImagenNA.Text = "Imagen:";
             // 
-            // textBox3
+            // input_CodigoNA
             // 
-            textBox3.BackColor = Color.White;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(119, 83);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(423, 23);
-            textBox3.TabIndex = 20;
+            input_CodigoNA.BackColor = Color.White;
+            input_CodigoNA.BorderStyle = BorderStyle.FixedSingle;
+            input_CodigoNA.Location = new Point(119, 83);
+            input_CodigoNA.Name = "input_CodigoNA";
+            input_CodigoNA.Size = new Size(423, 23);
+            input_CodigoNA.TabIndex = 20;
             // 
-            // label8
+            // lbl_CodigoNA
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Tahoma", 9.75F);
-            label8.Location = new Point(62, 84);
-            label8.Name = "label8";
-            label8.Size = new Size(51, 16);
-            label8.TabIndex = 19;
-            label8.Text = "Codigo:";
+            lbl_CodigoNA.AutoSize = true;
+            lbl_CodigoNA.Font = new Font("Tahoma", 9.75F);
+            lbl_CodigoNA.Location = new Point(62, 84);
+            lbl_CodigoNA.Name = "lbl_CodigoNA";
+            lbl_CodigoNA.Size = new Size(51, 16);
+            lbl_CodigoNA.TabIndex = 19;
+            lbl_CodigoNA.Text = "Codigo:";
             // 
-            // button1
+            // btn_BuscarNA
             // 
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderColor = Color.Black;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(119, 282);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 21;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = false;
+            btn_BuscarNA.BackColor = Color.White;
+            btn_BuscarNA.FlatAppearance.BorderColor = Color.Black;
+            btn_BuscarNA.FlatStyle = FlatStyle.Flat;
+            btn_BuscarNA.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_BuscarNA.Location = new Point(119, 282);
+            btn_BuscarNA.Name = "btn_BuscarNA";
+            btn_BuscarNA.Size = new Size(75, 23);
+            btn_BuscarNA.TabIndex = 21;
+            btn_BuscarNA.Text = "Buscar";
+            btn_BuscarNA.UseVisualStyleBackColor = false;
             // 
             // wf_NuevoArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(604, 466);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(label8);
-            Controls.Add(label9);
+            Controls.Add(btn_BuscarNA);
+            Controls.Add(input_CodigoNA);
+            Controls.Add(lbl_CodigoNA);
+            Controls.Add(lbl_ImagenNA);
             Controls.Add(label7);
-            Controls.Add(textBox2);
-            Controls.Add(label6);
-            Controls.Add(listBox2);
+            Controls.Add(input_PrecioNA);
+            Controls.Add(lbl_PrecioNA);
+            Controls.Add(lb_CategoriaNA);
             Controls.Add(label5);
-            Controls.Add(listBox1);
-            Controls.Add(label4);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(txt_Nombre);
+            Controls.Add(lb_MarcaNA);
+            Controls.Add(lbl_MarcaNA);
+            Controls.Add(input_DescripcionNA);
+            Controls.Add(lbl_DescripcionNA);
+            Controls.Add(lbl_NuevoArticulo);
+            Controls.Add(input_NombreNA);
             Controls.Add(btnAgregar);
-            Controls.Add(label1);
+            Controls.Add(lbl_NombreNA);
             MaximizeBox = false;
             MaximumSize = new Size(620, 505);
             Name = "wf_NuevoArticulo";
@@ -258,22 +258,22 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbl_NombreNA;
         private Button btnAgregar;
-        private TextBox txt_Nombre;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
-        private Label label4;
-        private ListBox listBox1;
-        private ListBox listBox2;
+        private TextBox input_NombreNA;
+        private Label lbl_NuevoArticulo;
+        private Label lbl_DescripcionNA;
+        private TextBox input_DescripcionNA;
+        private Label lbl_MarcaNA;
+        private ListBox lb_MarcaNA;
+        private ListBox lb_CategoriaNA;
         private Label label5;
-        private Label label6;
-        private TextBox textBox2;
+        private Label lbl_PrecioNA;
+        private TextBox input_PrecioNA;
         private Label label7;
-        private Label label9;
-        private TextBox textBox3;
-        private Label label8;
-        private Button button1;
+        private Label lbl_ImagenNA;
+        private TextBox input_CodigoNA;
+        private Label lbl_CodigoNA;
+        private Button btn_BuscarNA;
     }
 }

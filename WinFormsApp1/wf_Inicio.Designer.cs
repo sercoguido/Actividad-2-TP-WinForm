@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
-            helpToolStripMenuItem = new ToolStripMenuItem();
-            label1 = new Label();
-            button1 = new Button();
+            btn_Ayuda = new ToolStripMenuItem();
+            lbl_Titulo = new Label();
+            btn_Busqueda = new Button();
             btn_AgregarArticulo = new Button();
             statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            lbl_Creditos = new ToolStripStatusLabel();
             btn_EliminarArticulo = new Button();
             btn_ModificarArticulo = new Button();
-            button4 = new Button();
+            btn_MarcasCategorias = new Button();
             label2 = new Label();
-            groupBox1 = new GroupBox();
+            gb_AdmArticulos = new GroupBox();
             btn_DetallesArticulos = new Button();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
-            groupBox1.SuspendLayout();
+            gb_AdmArticulos.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.ControlLight;
             menuStrip1.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { btn_Ayuda });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RightToLeft = RightToLeft.Yes;
@@ -58,36 +58,36 @@
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
-            // helpToolStripMenuItem
+            // btn_Ayuda
             // 
-            helpToolStripMenuItem.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            helpToolStripMenuItem.Margin = new Padding(0, 0, 10, 0);
-            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(58, 20);
-            helpToolStripMenuItem.Text = "Ayuda";
+            btn_Ayuda.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Ayuda.Margin = new Padding(0, 0, 10, 0);
+            btn_Ayuda.Name = "btn_Ayuda";
+            btn_Ayuda.Size = new Size(58, 20);
+            btn_Ayuda.Text = "Ayuda";
             // 
-            // label1
+            // lbl_Titulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 48);
-            label1.Name = "label1";
-            label1.Size = new Size(149, 29);
-            label1.TabIndex = 1;
-            label1.Text = "Bienvenido/a";
+            lbl_Titulo.AutoSize = true;
+            lbl_Titulo.Font = new Font("Tahoma", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lbl_Titulo.Location = new Point(21, 48);
+            lbl_Titulo.Name = "lbl_Titulo";
+            lbl_Titulo.Size = new Size(149, 29);
+            lbl_Titulo.TabIndex = 1;
+            lbl_Titulo.Text = "Bienvenido/a";
             // 
-            // button1
+            // btn_Busqueda
             // 
-            button1.BackColor = Color.DarkGray;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 2;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(21, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(332, 147);
-            button1.TabIndex = 2;
-            button1.Text = "Busqueda";
-            button1.UseVisualStyleBackColor = false;
+            btn_Busqueda.BackColor = Color.DarkGray;
+            btn_Busqueda.FlatAppearance.BorderColor = Color.White;
+            btn_Busqueda.FlatAppearance.BorderSize = 2;
+            btn_Busqueda.FlatStyle = FlatStyle.Flat;
+            btn_Busqueda.Location = new Point(21, 109);
+            btn_Busqueda.Name = "btn_Busqueda";
+            btn_Busqueda.Size = new Size(332, 147);
+            btn_Busqueda.TabIndex = 2;
+            btn_Busqueda.Text = "Busqueda";
+            btn_Busqueda.UseVisualStyleBackColor = false;
             // 
             // btn_AgregarArticulo
             // 
@@ -102,18 +102,18 @@
             // 
             // statusStrip1
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 483);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { lbl_Creditos });
+            statusStrip1.Location = new Point(0, 459);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(756, 22);
             statusStrip1.TabIndex = 6;
             statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // lbl_Creditos
             // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(118, 17);
-            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            lbl_Creditos.Name = "lbl_Creditos";
+            lbl_Creditos.Size = new Size(57, 17);
+            lbl_Creditos.Text = "Grupo 2A";
             // 
             // btn_EliminarArticulo
             // 
@@ -137,15 +137,15 @@
             btn_ModificarArticulo.UseVisualStyleBackColor = false;
             btn_ModificarArticulo.Click += btn_ModificarArticulo_Click;
             // 
-            // button4
+            // btn_MarcasCategorias
             // 
-            button4.BackColor = Color.FromArgb(255, 255, 192);
-            button4.Location = new Point(541, 301);
-            button4.Name = "button4";
-            button4.Size = new Size(191, 110);
-            button4.TabIndex = 9;
-            button4.Text = "Marcas / Categorias";
-            button4.UseVisualStyleBackColor = false;
+            btn_MarcasCategorias.BackColor = Color.FromArgb(255, 255, 192);
+            btn_MarcasCategorias.Location = new Point(541, 301);
+            btn_MarcasCategorias.Name = "btn_MarcasCategorias";
+            btn_MarcasCategorias.Size = new Size(191, 110);
+            btn_MarcasCategorias.TabIndex = 9;
+            btn_MarcasCategorias.Text = "Marcas / Categorias";
+            btn_MarcasCategorias.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -157,17 +157,17 @@
             label2.TabIndex = 10;
             label2.Text = "Administracion de Articulos";
             // 
-            // groupBox1
+            // gb_AdmArticulos
             // 
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(btn_ModificarArticulo);
-            groupBox1.Controls.Add(btn_EliminarArticulo);
-            groupBox1.Controls.Add(btn_AgregarArticulo);
-            groupBox1.Location = new Point(368, 104);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(373, 155);
-            groupBox1.TabIndex = 11;
-            groupBox1.TabStop = false;
+            gb_AdmArticulos.Controls.Add(label2);
+            gb_AdmArticulos.Controls.Add(btn_ModificarArticulo);
+            gb_AdmArticulos.Controls.Add(btn_EliminarArticulo);
+            gb_AdmArticulos.Controls.Add(btn_AgregarArticulo);
+            gb_AdmArticulos.Location = new Point(368, 104);
+            gb_AdmArticulos.Name = "gb_AdmArticulos";
+            gb_AdmArticulos.Size = new Size(373, 155);
+            gb_AdmArticulos.TabIndex = 11;
+            gb_AdmArticulos.TabStop = false;
             // 
             // btn_DetallesArticulos
             // 
@@ -183,13 +183,13 @@
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(756, 505);
+            ClientSize = new Size(756, 481);
             Controls.Add(btn_DetallesArticulos);
-            Controls.Add(groupBox1);
-            Controls.Add(button4);
+            Controls.Add(gb_AdmArticulos);
+            Controls.Add(btn_MarcasCategorias);
             Controls.Add(statusStrip1);
-            Controls.Add(button1);
-            Controls.Add(label1);
+            Controls.Add(btn_Busqueda);
+            Controls.Add(lbl_Titulo);
             Controls.Add(menuStrip1);
             Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -206,8 +206,8 @@
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            gb_AdmArticulos.ResumeLayout(false);
+            gb_AdmArticulos.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,17 +215,17 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem helpToolStripMenuItem;
-        private Label label1;
-        private Button button1;
+        private ToolStripMenuItem btn_Ayuda;
+        private Label lbl_Titulo;
+        private Button btn_Busqueda;
         private Button btn_AgregarArticulo;
         private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel lbl_Creditos;
         private Button btn_EliminarArticulo;
         private Button btn_ModificarArticulo;
-        private Button button4;
+        private Button btn_MarcasCategorias;
         private Label label2;
-        private GroupBox groupBox1;
+        private GroupBox gb_AdmArticulos;
         private Button btn_DetallesArticulos;
     }
 }
