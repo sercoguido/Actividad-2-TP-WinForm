@@ -43,5 +43,11 @@ namespace GestionCatalogo
             wf_MarcasCategorias FormMarcasCategorias = new wf_MarcasCategorias();
             FormMarcasCategorias.ShowDialog();
         }
+
+        private void btn_Busqueda_Click(object sender, EventArgs e)
+        {
+            wf_Busqueda FormBusqueda = new wf_Busqueda();
+            FormBusqueda.ShowDialog();
+        }
     }
 }

@@ -88,6 +88,7 @@
             btn_Busqueda.TabIndex = 2;
             btn_Busqueda.Text = "Busqueda";
             btn_Busqueda.UseVisualStyleBackColor = false;
+            btn_Busqueda.Click += btn_Busqueda_Click;
             // 
             // btn_AgregarArticulo
             // 

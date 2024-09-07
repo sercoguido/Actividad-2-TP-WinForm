@@ -20,9 +20,10 @@ namespace GestionCatalogo
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            articulo art = new articulo();
+            art.Nombre = input_NombreNA.Text;
+            art.Descripcion = input_DescripcionNA.Text;
         }
-
         private void txt_Edad_TextChanged(object sender, EventArgs e)
         {
 

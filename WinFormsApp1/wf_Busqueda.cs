@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class wf_Busqueda: Form
+    public partial class wf_Busqueda : Form
     {
         public wf_Busqueda()
         {
             InitializeComponent();
+        }
+
+        private void wf_Busqueda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
