@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lbl_NombreNA = new Label();
-            btnAgregar = new Button();
+            btnAgregarNA = new Button();
             input_NombreNA = new TextBox();
             lbl_NuevoArticulo = new Label();
             lbl_DescripcionNA = new Label();
@@ -58,17 +58,17 @@
             lbl_NombreNA.Text = "Nombre:";
             lbl_NombreNA.Click += label1_Click;
             // 
-            // btnAgregar
+            // btnAgregarNA
             // 
-            btnAgregar.BackColor = Color.MediumSeaGreen;
-            btnAgregar.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAgregar.Location = new Point(419, 393);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(123, 46);
-            btnAgregar.TabIndex = 2;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = false;
-            btnAgregar.Click += btnAgregar_Click;
+            btnAgregarNA.BackColor = Color.MediumSeaGreen;
+            btnAgregarNA.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgregarNA.Location = new Point(419, 393);
+            btnAgregarNA.Name = "btnAgregarNA";
+            btnAgregarNA.Size = new Size(123, 46);
+            btnAgregarNA.TabIndex = 2;
+            btnAgregarNA.Text = "Agregar";
+            btnAgregarNA.UseVisualStyleBackColor = false;
+            btnAgregarNA.Click += btnAgregar_Click;
             // 
             // input_NombreNA
             // 
@@ -245,11 +245,12 @@
             Controls.Add(lbl_DescripcionNA);
             Controls.Add(lbl_NuevoArticulo);
             Controls.Add(input_NombreNA);
-            Controls.Add(btnAgregar);
+            Controls.Add(btnAgregarNA);
             Controls.Add(lbl_NombreNA);
             MaximizeBox = false;
             MaximumSize = new Size(620, 505);
             Name = "wf_NuevoArticulo";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Gestion Catalogo [Nuevo Articulo]";
             Load += Form2_Load_1;
             ResumeLayout(false);
@@ -259,7 +260,7 @@
         #endregion
 
         private Label lbl_NombreNA;
-        private Button btnAgregar;
+        private Button btnAgregarNA;
         private TextBox input_NombreNA;
         private Label lbl_NuevoArticulo;
         private Label lbl_DescripcionNA;

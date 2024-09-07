@@ -40,9 +40,9 @@
             lbl_NroArticuloEA.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbl_NroArticuloEA.Location = new Point(47, 59);
             lbl_NroArticuloEA.Name = "lbl_NroArticuloEA";
-            lbl_NroArticuloEA.Size = new Size(274, 19);
+            lbl_NroArticuloEA.Size = new Size(277, 19);
             lbl_NroArticuloEA.TabIndex = 0;
-            lbl_NroArticuloEA.Text = "INGRESE EL NUMERO DE ARTICULO";
+            lbl_NroArticuloEA.Text = "INGRESE EL CODIGO DE ARTICULO:";
             // 
             // label2
             // 
@@ -83,6 +83,7 @@
             MaximizeBox = false;
             MaximumSize = new Size(390, 351);
             Name = "wf_EliminarArticulo";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "wf_EliminarArticulo";
             Load += wf_EliminarArticulo_Load;
             ResumeLayout(false);

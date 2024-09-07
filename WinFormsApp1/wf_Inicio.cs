@@ -29,7 +29,19 @@ namespace GestionCatalogo
         private void btn_ModificarArticulo_Click(object sender, EventArgs e)
         {
             wf_ModificarArticulo FormModificarArticulo = new wf_ModificarArticulo();
-            FormModificarArticulo .ShowDialog(); 
+            FormModificarArticulo.ShowDialog();
+        }
+
+        private void btn_DetallesArticulos_Click(object sender, EventArgs e)
+        {
+            wf_Detalles FormDetalles = new wf_Detalles();
+            FormDetalles.ShowDialog();
+        }
+
+        private void btn_MarcasCategorias_Click(object sender, EventArgs e)
+        {
+            wf_MarcasCategorias FormMarcasCategorias = new wf_MarcasCategorias();
+            FormMarcasCategorias.ShowDialog();
         }
     }
 }

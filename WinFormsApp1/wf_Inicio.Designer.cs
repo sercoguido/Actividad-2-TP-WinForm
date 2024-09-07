@@ -140,12 +140,13 @@
             // btn_MarcasCategorias
             // 
             btn_MarcasCategorias.BackColor = Color.FromArgb(255, 255, 192);
-            btn_MarcasCategorias.Location = new Point(541, 301);
+            btn_MarcasCategorias.Location = new Point(540, 301);
             btn_MarcasCategorias.Name = "btn_MarcasCategorias";
             btn_MarcasCategorias.Size = new Size(191, 110);
             btn_MarcasCategorias.TabIndex = 9;
             btn_MarcasCategorias.Text = "Marcas / Categorias";
             btn_MarcasCategorias.UseVisualStyleBackColor = false;
+            btn_MarcasCategorias.Click += btn_MarcasCategorias_Click;
             // 
             // label2
             // 
@@ -177,6 +178,7 @@
             btn_DetallesArticulos.TabIndex = 12;
             btn_DetallesArticulos.Text = "Detalles";
             btn_DetallesArticulos.UseVisualStyleBackColor = true;
+            btn_DetallesArticulos.Click += btn_DetallesArticulos_Click;
             // 
             // wf_Inicio
             // 
@@ -200,7 +202,7 @@
             Name = "wf_Inicio";
             RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Gestion Catalogo [Inicio]";
+            Text = " ";
             Load += wf_Inicio_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
