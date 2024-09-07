@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionCatalogo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace WinFormsApp1
 
         private void wf_Busqueda_Load(object sender, EventArgs e)
         {
-
+            ArticuloServicio servicio = new ArticuloServicio();
+            dgvArticulos.DataSource = servicio.listar();
         }
     }
 }

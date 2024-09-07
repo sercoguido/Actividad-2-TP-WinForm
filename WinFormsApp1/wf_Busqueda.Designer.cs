@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lv_Busqueda = new ListView();
             lb_BusquedaMarca = new ListBox();
             lb_BusquedaCategoria = new ListBox();
             lb_RangoPrecio1 = new ListBox();
@@ -39,15 +38,9 @@
             lbl_RangoPrecioBusqueda = new Label();
             lbl_NombreBusqueda = new Label();
             lbl_TituloBusqueda = new Label();
+            dgvArticulos = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvArticulos).BeginInit();
             SuspendLayout();
-            // 
-            // lv_Busqueda
-            // 
-            lv_Busqueda.Location = new Point(12, 135);
-            lv_Busqueda.Name = "lv_Busqueda";
-            lv_Busqueda.Size = new Size(498, 351);
-            lv_Busqueda.TabIndex = 0;
-            lv_Busqueda.UseCompatibleStateImageBehavior = false;
             // 
             // lb_BusquedaMarca
             // 
@@ -151,12 +144,21 @@
             lbl_TituloBusqueda.TabIndex = 12;
             lbl_TituloBusqueda.Text = "Busqueda por Filtros";
             // 
+            // dgvArticulos
+            // 
+            dgvArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvArticulos.Location = new Point(14, 138);
+            dgvArticulos.Name = "dgvArticulos";
+            dgvArticulos.Size = new Size(496, 348);
+            dgvArticulos.TabIndex = 13;
+            // 
             // wf_Busqueda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(526, 498);
+            Controls.Add(dgvArticulos);
             Controls.Add(lbl_TituloBusqueda);
             Controls.Add(lbl_NombreBusqueda);
             Controls.Add(lbl_RangoPrecioBusqueda);
@@ -167,20 +169,18 @@
             Controls.Add(lb_RangoPrecio1);
             Controls.Add(lb_BusquedaCategoria);
             Controls.Add(lb_BusquedaMarca);
-            Controls.Add(lv_Busqueda);
             MaximizeBox = false;
             MaximumSize = new Size(542, 537);
             Name = "wf_Busqueda";
             StartPosition = FormStartPosition.CenterParent;
             Text = "wf_Busqueda";
             Load += wf_Busqueda_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvArticulos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ListView lv_Busqueda;
         private ListBox lb_BusquedaMarca;
         private ListBox lb_BusquedaCategoria;
         private ListBox lb_RangoPrecio1;
@@ -191,5 +191,6 @@
         private Label lbl_RangoPrecioBusqueda;
         private Label lbl_NombreBusqueda;
         private Label lbl_TituloBusqueda;
+        private DataGridView dgvArticulos;
     }
 }
