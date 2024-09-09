@@ -14,13 +14,14 @@ namespace GestionCatalogo
         public string Descripcion { get; set; }
         public marca Marca { get; set; }
         public categoria Categoria { get; set; }
-        public List<imagen> Imagenes { get; set; }
+        public string Imagen { get; set; }
+        //public List<imagen> Imagenes { get; set; }
         public decimal Precio { get; set; }
 
-        public articulo()
-        {
-            Imagenes = new List<imagen>();
-        }
+        //public articulo()
+        //{
+        //   Imagenes = new List<imagen>();
+        //}
 
     }
 }

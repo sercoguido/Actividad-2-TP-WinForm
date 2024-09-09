@@ -16,5 +16,16 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btn_AgregarMarcasMC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AgregarCategoriasMC_Click(object sender, EventArgs e)
+        {
+            frmAltaCategoria alta = new frmAltaCategoria();
+            alta.ShowDialog();
+        }
     }
 }

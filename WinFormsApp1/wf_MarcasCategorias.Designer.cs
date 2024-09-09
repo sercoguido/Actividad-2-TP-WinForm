@@ -50,6 +50,7 @@
             btn_AgregarMarcasMC.TabIndex = 0;
             btn_AgregarMarcasMC.Text = "Agregar";
             btn_AgregarMarcasMC.UseVisualStyleBackColor = false;
+            btn_AgregarMarcasMC.Click += btn_AgregarMarcasMC_Click;
             // 
             // btn_EliminarMarcasMC
             // 
@@ -125,6 +126,7 @@
             btn_AgregarCategoriasMC.TabIndex = 0;
             btn_AgregarCategoriasMC.Text = "Agregar";
             btn_AgregarCategoriasMC.UseVisualStyleBackColor = false;
+            btn_AgregarCategoriasMC.Click += btn_AgregarCategoriasMC_Click;
             // 
             // wf_MarcasCategorias
             // 
