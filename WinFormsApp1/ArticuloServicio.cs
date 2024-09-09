@@ -24,9 +24,11 @@ namespace GestionCatalogo
 
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = @"
-                                    SELECT a.id, a.nombre, a.descripcion, a.IdMarca, a.IdCategoria, a.Precio, i.imagenurl
-                                        FROM Articulos a
-                                        LEFT JOIN Imagenes i ON a.id = i.idArticulo;";
+                                        SELECT a.id, a.nombre, a.descripcion, m.Descripcion AS MarcaNombre, c.Descripcion AS CategoriaNombre, a.Precio, i.imagenurl
+                                        FROM ARTICULOS a
+                                        LEFT JOIN Imagenes i ON a.id = i.idArticulo
+                                        LEFT JOIN Categorias c ON a.IdCategoria = c.Id
+                                        LEFT JOIN Marcas m ON a.IdCategoria = m.Id;";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -40,6 +42,8 @@ namespace GestionCatalogo
                     aux.Id = lector.GetInt32(0);
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
+                    aux.Marca = (string)lector["MarcaNombre"];
+                    aux.Categoria = lector.IsDBNull(4) ? null : (string)lector["CategoriaNombre"]; // Manejar posibles valores NULL
                     aux.Precio = Math.Round(lector.GetDecimal(5), 2);  // Redondear a 2 decimales
                     aux.Imagen = (string)lector["imagenurl"];
 

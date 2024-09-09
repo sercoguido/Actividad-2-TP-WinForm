@@ -12,8 +12,8 @@ namespace GestionCatalogo
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public marca Marca { get; set; }
-        public categoria Categoria { get; set; }
+        public string Marca { get; set; }
+        public string Categoria { get; set; }
         public string Imagen { get; set; }
         //public List<imagen> Imagenes { get; set; }
         public decimal Precio { get; set; }

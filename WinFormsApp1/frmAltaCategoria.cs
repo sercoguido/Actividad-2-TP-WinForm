@@ -30,24 +30,7 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            categoria nuevaCategoria = new categoria();
-            CategoriaServicio categoriaServicio = new CategoriaServicio();
 
-            try
-            {
-                nuevaCategoria.Nombre = txtNombre.Text;
-
-                categoriaServicio.Agregar(nuevaCategoria);
-
-                MessageBox.Show("¡Categoría añadida correctamente!");
-
-                Close();
-            }
-            catch (Exception ex)
-            {
-                // Mostrar mensaje con el error
-                MessageBox.Show(ex.ToString());
-            }
         }
     }
 }
