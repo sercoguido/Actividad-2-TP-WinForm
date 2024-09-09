@@ -35,8 +35,6 @@
             lbl_DescripcionNA = new Label();
             input_DescripcionNA = new TextBox();
             lbl_MarcaNA = new Label();
-            lb_MarcaNA = new ListBox();
-            lb_CategoriaNA = new ListBox();
             label5 = new Label();
             lbl_PrecioNA = new Label();
             input_PrecioNA = new TextBox();
@@ -45,6 +43,8 @@
             input_CodigoNA = new TextBox();
             lbl_CodigoNA = new Label();
             btn_BuscarNA = new Button();
+            listBoxMarca = new ListBox();
+            listBoxCategoria = new ListBox();
             SuspendLayout();
             // 
             // lbl_NombreNA
@@ -120,29 +120,6 @@
             lbl_MarcaNA.TabIndex = 10;
             lbl_MarcaNA.Text = "Marca:";
             lbl_MarcaNA.Click += label4_Click;
-            // 
-            // lb_MarcaNA
-            // 
-            lb_MarcaNA.BackColor = Color.White;
-            lb_MarcaNA.BorderStyle = BorderStyle.FixedSingle;
-            lb_MarcaNA.FormattingEnabled = true;
-            lb_MarcaNA.ItemHeight = 15;
-            lb_MarcaNA.Location = new Point(119, 245);
-            lb_MarcaNA.Name = "lb_MarcaNA";
-            lb_MarcaNA.Size = new Size(166, 17);
-            lb_MarcaNA.TabIndex = 11;
-            lb_MarcaNA.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
-            // lb_CategoriaNA
-            // 
-            lb_CategoriaNA.BackColor = Color.White;
-            lb_CategoriaNA.BorderStyle = BorderStyle.FixedSingle;
-            lb_CategoriaNA.FormattingEnabled = true;
-            lb_CategoriaNA.ItemHeight = 15;
-            lb_CategoriaNA.Location = new Point(366, 246);
-            lb_CategoriaNA.Name = "lb_CategoriaNA";
-            lb_CategoriaNA.Size = new Size(176, 17);
-            lb_CategoriaNA.TabIndex = 13;
             // 
             // label5
             // 
@@ -225,11 +202,32 @@
             btn_BuscarNA.Text = "Buscar";
             btn_BuscarNA.UseVisualStyleBackColor = false;
             // 
+            // listBoxMarca
+            // 
+            listBoxMarca.FormattingEnabled = true;
+            listBoxMarca.ItemHeight = 15;
+            listBoxMarca.Location = new Point(119, 246);
+            listBoxMarca.Name = "listBoxMarca";
+            listBoxMarca.Size = new Size(166, 19);
+            listBoxMarca.TabIndex = 22;
+            listBoxMarca.SelectedIndexChanged += listBoxMarca_SelectedIndexChanged;
+            // 
+            // listBoxCategoria
+            // 
+            listBoxCategoria.FormattingEnabled = true;
+            listBoxCategoria.ItemHeight = 15;
+            listBoxCategoria.Location = new Point(366, 246);
+            listBoxCategoria.Name = "listBoxCategoria";
+            listBoxCategoria.Size = new Size(166, 19);
+            listBoxCategoria.TabIndex = 23;
+            // 
             // wf_NuevoArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(604, 466);
+            Controls.Add(listBoxCategoria);
+            Controls.Add(listBoxMarca);
             Controls.Add(btn_BuscarNA);
             Controls.Add(input_CodigoNA);
             Controls.Add(lbl_CodigoNA);
@@ -237,9 +235,7 @@
             Controls.Add(label7);
             Controls.Add(input_PrecioNA);
             Controls.Add(lbl_PrecioNA);
-            Controls.Add(lb_CategoriaNA);
             Controls.Add(label5);
-            Controls.Add(lb_MarcaNA);
             Controls.Add(lbl_MarcaNA);
             Controls.Add(input_DescripcionNA);
             Controls.Add(lbl_DescripcionNA);
@@ -266,8 +262,6 @@
         private Label lbl_DescripcionNA;
         private TextBox input_DescripcionNA;
         private Label lbl_MarcaNA;
-        private ListBox lb_MarcaNA;
-        private ListBox lb_CategoriaNA;
         private Label label5;
         private Label lbl_PrecioNA;
         private TextBox input_PrecioNA;
@@ -276,5 +270,7 @@
         private TextBox input_CodigoNA;
         private Label lbl_CodigoNA;
         private Button btn_BuscarNA;
+        private ListBox listBoxMarca;
+        private ListBox listBoxCategoria;
     }
 }

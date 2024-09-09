@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestionCatalogo
+namespace dominio
 {
-    internal class imagen
+    public class imagen
     {
         public int Id { get; set; }
         public string Ruta { get; set; }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using dominio;
 
 namespace GestionCatalogo
 {
@@ -65,6 +65,11 @@ namespace GestionCatalogo
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

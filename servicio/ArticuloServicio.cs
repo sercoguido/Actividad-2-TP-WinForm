@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
+using dominio;
 
-namespace GestionCatalogo
+
+namespace servicio
 {
-    class ArticuloServicio
+    public class ArticuloServicio
     {
         public List<articulo> listar()
         {
@@ -24,7 +25,7 @@ namespace GestionCatalogo
 
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = @"
-                                        SELECT a.id, a.nombre, a.descripcion, m.Descripcion AS MarcaNombre, c.Descripcion AS CategoriaNombre, a.Precio, i.imagenurl
+                                        SELECT a.id,a.codigo, a.nombre, a.descripcion, m.Descripcion AS MarcaNombre, c.Descripcion AS CategoriaNombre, a.Precio, i.imagenurl
                                         FROM ARTICULOS a
                                         LEFT JOIN Imagenes i ON a.id = i.idArticulo
                                         LEFT JOIN Categorias c ON a.IdCategoria = c.Id
@@ -40,11 +41,14 @@ namespace GestionCatalogo
                     articulo aux = new articulo();
 
                     aux.Id = lector.GetInt32(0);
+                    aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.Marca = (string)lector["MarcaNombre"];
-                    aux.Categoria = lector.IsDBNull(4) ? null : (string)lector["CategoriaNombre"]; // Manejar posibles valores NULL
-                    aux.Precio = Math.Round(lector.GetDecimal(5), 2);  // Redondear a 2 decimales
+                    aux.Marca = new Marca();
+                    aux.Marca.Descripcion = (string)lector["MarcaNombre"];
+                    aux.Categoria = new Categoria();
+                    aux.Categoria = !lector.IsDBNull(5) ? new Categoria { Descripcion = (string)lector["CategoriaNombre"] }: null;
+                    aux.Precio = Math.Round(lector.GetDecimal(6), 2);  // Redondear a 2 decimales
                     aux.Imagen = (string)lector["imagenurl"];
 
                     lista.Add(aux);
