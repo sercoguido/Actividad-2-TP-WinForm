@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class frmAltaCategoria
+    partial class frmAltaMarca
     {
         /// <summary>
         /// Required designer variable.
@@ -28,71 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
+            btnAgregarMarca = new Button();
             txtNombre = new TextBox();
-            button1 = new Button();
+            label2 = new Label();
+            lbl_Marca = new Label();
             SuspendLayout();
             // 
-            // label1
+            // btnAgregarMarca
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(146, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(163, 28);
-            label1.TabIndex = 0;
-            label1.Text = "ALTA CATEGORIA";
-            label1.Click += label1_Click;
+            btnAgregarMarca.Location = new Point(199, 151);
+            btnAgregarMarca.Name = "btnAgregarMarca";
+            btnAgregarMarca.Size = new Size(75, 23);
+            btnAgregarMarca.TabIndex = 7;
+            btnAgregarMarca.Text = "Agregar";
+            btnAgregarMarca.UseVisualStyleBackColor = true;
+            btnAgregarMarca.Click += btnAgregarMarca_Click;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(85, 94);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(308, 23);
+            txtNombre.TabIndex = 6;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(204, 81);
+            label2.Location = new Point(210, 74);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
-            label2.TabIndex = 1;
+            label2.TabIndex = 5;
             label2.Text = "Nombre ";
             // 
-            // txtNombre
+            // lbl_Marca
             // 
-            txtNombre.Location = new Point(79, 101);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(308, 23);
-            txtNombre.TabIndex = 2;
-            txtNombre.TextChanged += txtNombre_TextChanged;
+            lbl_Marca.AutoSize = true;
+            lbl_Marca.Font = new Font("Segoe UI", 15F);
+            lbl_Marca.Location = new Point(173, 20);
+            lbl_Marca.Name = "lbl_Marca";
+            lbl_Marca.Size = new Size(128, 28);
+            lbl_Marca.TabIndex = 4;
+            lbl_Marca.Text = "ALTA MARCA";
             // 
-            // button1
-            // 
-            button1.Location = new Point(193, 158);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "Agregar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // frmAltaCategoria
+            // frmAltaMarca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(478, 194);
-            Controls.Add(button1);
+            Controls.Add(btnAgregarMarca);
             Controls.Add(txtNombre);
             Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "frmAltaCategoria";
-            Text = "frmAltaCategoria";
-            Load += frmAltaCategoria_Load;
+            Controls.Add(lbl_Marca);
+            Name = "frmAltaMarca";
+            Text = "frmAltaMarca";
+            Load += frmAltaMarca_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        private Button btnAgregarMarca;
         private TextBox txtNombre;
-        private Button button1;
+        private Label label2;
+        private Label lbl_Marca;
     }
 }

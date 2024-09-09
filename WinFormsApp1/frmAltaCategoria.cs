@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using servicio;
 
 namespace WinFormsApp1
 {
@@ -29,6 +31,32 @@ namespace WinFormsApp1
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            Categoria cat = new Categoria();
+            CategoriaServicio servicio = new CategoriaServicio();
+
+            try
+            {
+                cat.Descripcion = txtNombre.Text;
+                servicio.agregar(cat);
+
+                MessageBox.Show("Categoria Agregada Satisfactoriamente!");
+                Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmAltaCategoria_Load(object sender, EventArgs e)
         {
 
         }

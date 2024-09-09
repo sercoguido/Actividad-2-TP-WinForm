@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using dominio;
+using servicio;
 
 
 namespace servicio
@@ -49,5 +50,27 @@ namespace servicio
 
         }
 
+        public void agregar(Categoria cat)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("INSERT into categorias (descripcion) values ('" + cat.Descripcion + "')");
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+
+        }
+
     }
+
+
 }

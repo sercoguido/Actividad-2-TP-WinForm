@@ -47,6 +47,26 @@ namespace servicio
             }
 
 
+
+        }
+        public void agregar(Marca mar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("INSERT into marcas (descripcion) values ('" + mar.Descripcion + "')");
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+
         }
 
     }

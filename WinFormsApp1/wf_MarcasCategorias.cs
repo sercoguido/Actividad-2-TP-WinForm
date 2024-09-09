@@ -20,7 +20,8 @@ namespace WinFormsApp1
 
         private void btn_AgregarMarcasMC_Click(object sender, EventArgs e)
         {
-
+            frmAltaMarca alta = new frmAltaMarca();
+            alta.ShowDialog();
         }
 
         private void btn_AgregarCategoriasMC_Click(object sender, EventArgs e)
