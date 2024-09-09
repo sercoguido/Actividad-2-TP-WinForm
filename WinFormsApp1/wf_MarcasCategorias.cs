@@ -1,4 +1,5 @@
-﻿using System;
+﻿using servicio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,16 @@ namespace WinFormsApp1
         {
             frmAltaCategoria alta = new frmAltaCategoria();
             alta.ShowDialog();
+        }
+
+        private void wf_MarcasCategorias_Load(object sender, EventArgs e)
+        {
+            MarcaServicio servicio = new MarcaServicio();
+            dgvMarcas.DataSource = servicio.listar();
+
+
+            CategoriaServicio servicio2 = new CategoriaServicio();
+            dgvCategorias.DataSource = servicio2.listar();
         }
     }
 }

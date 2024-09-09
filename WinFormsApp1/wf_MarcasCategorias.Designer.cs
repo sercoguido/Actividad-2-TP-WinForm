@@ -30,14 +30,16 @@
         {
             btn_AgregarMarcasMC = new Button();
             btn_EliminarMarcasMC = new Button();
-            lv_MarcasMC = new ListView();
             gb_MarcasMC = new GroupBox();
+            dgvMarcas = new DataGridView();
             gb_CategoriasMC = new GroupBox();
-            lv_CategoriasMC = new ListView();
             btn_EliminarCategoriasMC = new Button();
             btn_AgregarCategoriasMC = new Button();
+            dgvCategorias = new DataGridView();
             gb_MarcasMC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMarcas).BeginInit();
             gb_CategoriasMC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
             // btn_AgregarMarcasMC
@@ -63,17 +65,9 @@
             btn_EliminarMarcasMC.Text = "Eliminar";
             btn_EliminarMarcasMC.UseVisualStyleBackColor = false;
             // 
-            // lv_MarcasMC
-            // 
-            lv_MarcasMC.Location = new Point(13, 70);
-            lv_MarcasMC.Name = "lv_MarcasMC";
-            lv_MarcasMC.Size = new Size(213, 329);
-            lv_MarcasMC.TabIndex = 4;
-            lv_MarcasMC.UseCompatibleStateImageBehavior = false;
-            // 
             // gb_MarcasMC
             // 
-            gb_MarcasMC.Controls.Add(lv_MarcasMC);
+            gb_MarcasMC.Controls.Add(dgvMarcas);
             gb_MarcasMC.Controls.Add(btn_EliminarMarcasMC);
             gb_MarcasMC.Controls.Add(btn_AgregarMarcasMC);
             gb_MarcasMC.Font = new Font("Tahoma", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
@@ -84,9 +78,17 @@
             gb_MarcasMC.TabStop = false;
             gb_MarcasMC.Text = "Marcas";
             // 
+            // dgvMarcas
+            // 
+            dgvMarcas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMarcas.Location = new Point(13, 73);
+            dgvMarcas.Name = "dgvMarcas";
+            dgvMarcas.Size = new Size(213, 329);
+            dgvMarcas.TabIndex = 5;
+            // 
             // gb_CategoriasMC
             // 
-            gb_CategoriasMC.Controls.Add(lv_CategoriasMC);
+            gb_CategoriasMC.Controls.Add(dgvCategorias);
             gb_CategoriasMC.Controls.Add(btn_EliminarCategoriasMC);
             gb_CategoriasMC.Controls.Add(btn_AgregarCategoriasMC);
             gb_CategoriasMC.Font = new Font("Tahoma", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
@@ -96,14 +98,6 @@
             gb_CategoriasMC.TabIndex = 7;
             gb_CategoriasMC.TabStop = false;
             gb_CategoriasMC.Text = "Categorias";
-            // 
-            // lv_CategoriasMC
-            // 
-            lv_CategoriasMC.Location = new Point(13, 70);
-            lv_CategoriasMC.Name = "lv_CategoriasMC";
-            lv_CategoriasMC.Size = new Size(213, 329);
-            lv_CategoriasMC.TabIndex = 4;
-            lv_CategoriasMC.UseCompatibleStateImageBehavior = false;
             // 
             // btn_EliminarCategoriasMC
             // 
@@ -128,6 +122,14 @@
             btn_AgregarCategoriasMC.UseVisualStyleBackColor = false;
             btn_AgregarCategoriasMC.Click += btn_AgregarCategoriasMC_Click;
             // 
+            // dgvCategorias
+            // 
+            dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCategorias.Location = new Point(13, 70);
+            dgvCategorias.Name = "dgvCategorias";
+            dgvCategorias.Size = new Size(213, 329);
+            dgvCategorias.TabIndex = 6;
+            // 
             // wf_MarcasCategorias
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -139,8 +141,11 @@
             Name = "wf_MarcasCategorias";
             StartPosition = FormStartPosition.CenterParent;
             Text = "wf_MarcasCategorias";
+            Load += wf_MarcasCategorias_Load;
             gb_MarcasMC.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvMarcas).EndInit();
             gb_CategoriasMC.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
             ResumeLayout(false);
         }
 
@@ -148,11 +153,11 @@
 
         private Button btn_AgregarMarcasMC;
         private Button btn_EliminarMarcasMC;
-        private ListView lv_MarcasMC;
         private GroupBox gb_MarcasMC;
         private GroupBox gb_CategoriasMC;
-        private ListView lv_CategoriasMC;
         private Button btn_EliminarCategoriasMC;
         private Button btn_AgregarCategoriasMC;
+        private DataGridView dgvMarcas;
+        private DataGridView dgvCategorias;
     }
 }
