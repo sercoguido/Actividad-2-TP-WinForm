@@ -14,6 +14,7 @@ namespace servicio
         public List<articulo> listar()
         {
             List<articulo> lista = new List<articulo>();
+            AccesoDatos datos = new AccesoDatos();
 
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -57,10 +58,10 @@ namespace servicio
                 conexion.Close();
                 return lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
 
