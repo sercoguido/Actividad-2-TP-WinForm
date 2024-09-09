@@ -43,8 +43,8 @@
             input_CodigoNA = new TextBox();
             lbl_CodigoNA = new Label();
             btn_BuscarNA = new Button();
-            listBoxMarca = new ListBox();
-            listBoxCategoria = new ListBox();
+            CbMarcas = new ComboBox();
+            CbCategoria = new ComboBox();
             SuspendLayout();
             // 
             // lbl_NombreNA
@@ -202,32 +202,29 @@
             btn_BuscarNA.Text = "Buscar";
             btn_BuscarNA.UseVisualStyleBackColor = false;
             // 
-            // listBoxMarca
+            // CbMarcas
             // 
-            listBoxMarca.FormattingEnabled = true;
-            listBoxMarca.ItemHeight = 15;
-            listBoxMarca.Location = new Point(119, 246);
-            listBoxMarca.Name = "listBoxMarca";
-            listBoxMarca.Size = new Size(166, 19);
-            listBoxMarca.TabIndex = 22;
-            listBoxMarca.SelectedIndexChanged += listBoxMarca_SelectedIndexChanged;
+            CbMarcas.FormattingEnabled = true;
+            CbMarcas.Location = new Point(119, 244);
+            CbMarcas.Name = "CbMarcas";
+            CbMarcas.Size = new Size(166, 23);
+            CbMarcas.TabIndex = 24;
             // 
-            // listBoxCategoria
+            // CbCategoria
             // 
-            listBoxCategoria.FormattingEnabled = true;
-            listBoxCategoria.ItemHeight = 15;
-            listBoxCategoria.Location = new Point(366, 246);
-            listBoxCategoria.Name = "listBoxCategoria";
-            listBoxCategoria.Size = new Size(166, 19);
-            listBoxCategoria.TabIndex = 23;
+            CbCategoria.FormattingEnabled = true;
+            CbCategoria.Location = new Point(366, 244);
+            CbCategoria.Name = "CbCategoria";
+            CbCategoria.Size = new Size(166, 23);
+            CbCategoria.TabIndex = 25;
             // 
             // wf_NuevoArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(604, 466);
-            Controls.Add(listBoxCategoria);
-            Controls.Add(listBoxMarca);
+            Controls.Add(CbCategoria);
+            Controls.Add(CbMarcas);
             Controls.Add(btn_BuscarNA);
             Controls.Add(input_CodigoNA);
             Controls.Add(lbl_CodigoNA);
@@ -270,7 +267,7 @@
         private TextBox input_CodigoNA;
         private Label lbl_CodigoNA;
         private Button btn_BuscarNA;
-        private ListBox listBoxMarca;
-        private ListBox listBoxCategoria;
+        private ComboBox CbMarcas;
+        private ComboBox CbCategoria;
     }
 }

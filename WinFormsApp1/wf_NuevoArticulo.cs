@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
+using servicio;
 
 namespace GestionCatalogo
 {
@@ -41,7 +42,18 @@ namespace GestionCatalogo
 
         private void Form2_Load_1(object sender, EventArgs e)
         {
+            MarcaServicio marcaServicio = new MarcaServicio();
+            CategoriaServicio categoriaServicio = new CategoriaServicio();
+            try
+            {
+                CbMarcas.DataSource = marcaServicio.listar();
+                CbCategoria.DataSource = categoriaServicio.listar();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
