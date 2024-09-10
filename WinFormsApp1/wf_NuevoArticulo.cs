@@ -22,8 +22,38 @@ namespace GestionCatalogo
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             articulo art = new articulo();
-            art.Nombre = input_NombreNA.Text;
-            art.Descripcion = input_DescripcionNA.Text;
+            ArticuloServicio servicio = new ArticuloServicio();
+
+            try
+            {
+                art.Codigo = txtCodigo.Text;
+                art.Nombre = txtNombre.Text;
+                art.Descripcion = inpDescripcion.Text;
+                art.Marca = (Marca)CbMarcas.SelectedItem;
+                art.Categoria = (Categoria)CbCategoria.SelectedItem;
+                decimal precio;
+                if (decimal.TryParse(inpPrecio.Text, out precio))
+                {
+                    art.Precio = precio;
+                }
+                else
+                {
+                    // Manejar error, el valor no es un número válido
+                    MessageBox.Show("Ingrese un valor numérico válido para el precio.");
+                }
+
+                servicio.agregar(art);
+
+                MessageBox.Show("Articulo Agregado Satisfactoriamente!");
+                Close();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
         private void txt_Edad_TextChanged(object sender, EventArgs e)
         {
@@ -82,6 +112,11 @@ namespace GestionCatalogo
         }
 
         private void listBoxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void input_NombreNA_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -30,17 +30,17 @@
         {
             lbl_NombreNA = new Label();
             btnAgregarNA = new Button();
-            input_NombreNA = new TextBox();
+            txtNombre = new TextBox();
             lbl_NuevoArticulo = new Label();
             lbl_DescripcionNA = new Label();
-            input_DescripcionNA = new TextBox();
+            inpDescripcion = new TextBox();
             lbl_MarcaNA = new Label();
             label5 = new Label();
             lbl_PrecioNA = new Label();
-            input_PrecioNA = new TextBox();
+            inpPrecio = new TextBox();
             label7 = new Label();
             lbl_ImagenNA = new Label();
-            input_CodigoNA = new TextBox();
+            txtCodigo = new TextBox();
             lbl_CodigoNA = new Label();
             btn_BuscarNA = new Button();
             CbMarcas = new ComboBox();
@@ -70,14 +70,15 @@
             btnAgregarNA.UseVisualStyleBackColor = false;
             btnAgregarNA.Click += btnAgregar_Click;
             // 
-            // input_NombreNA
+            // txtNombre
             // 
-            input_NombreNA.BackColor = Color.White;
-            input_NombreNA.BorderStyle = BorderStyle.FixedSingle;
-            input_NombreNA.Location = new Point(119, 112);
-            input_NombreNA.Name = "input_NombreNA";
-            input_NombreNA.Size = new Size(423, 23);
-            input_NombreNA.TabIndex = 4;
+            txtNombre.BackColor = Color.White;
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Location = new Point(119, 112);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(423, 23);
+            txtNombre.TabIndex = 4;
+            txtNombre.TextChanged += input_NombreNA_TextChanged;
             // 
             // lbl_NuevoArticulo
             // 
@@ -100,15 +101,15 @@
             lbl_DescripcionNA.TabIndex = 8;
             lbl_DescripcionNA.Text = "Descripción:";
             // 
-            // input_DescripcionNA
+            // inpDescripcion
             // 
-            input_DescripcionNA.BackColor = Color.White;
-            input_DescripcionNA.BorderStyle = BorderStyle.FixedSingle;
-            input_DescripcionNA.Location = new Point(119, 141);
-            input_DescripcionNA.Multiline = true;
-            input_DescripcionNA.Name = "input_DescripcionNA";
-            input_DescripcionNA.Size = new Size(423, 86);
-            input_DescripcionNA.TabIndex = 9;
+            inpDescripcion.BackColor = Color.White;
+            inpDescripcion.BorderStyle = BorderStyle.FixedSingle;
+            inpDescripcion.Location = new Point(119, 141);
+            inpDescripcion.Multiline = true;
+            inpDescripcion.Name = "inpDescripcion";
+            inpDescripcion.Size = new Size(423, 86);
+            inpDescripcion.TabIndex = 9;
             // 
             // lbl_MarcaNA
             // 
@@ -142,15 +143,15 @@
             lbl_PrecioNA.Text = "Precio:";
             lbl_PrecioNA.Click += label6_Click;
             // 
-            // input_PrecioNA
+            // inpPrecio
             // 
-            input_PrecioNA.BackColor = SystemColors.Control;
-            input_PrecioNA.BorderStyle = BorderStyle.FixedSingle;
-            input_PrecioNA.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            input_PrecioNA.Location = new Point(119, 330);
-            input_PrecioNA.Name = "input_PrecioNA";
-            input_PrecioNA.Size = new Size(166, 22);
-            input_PrecioNA.TabIndex = 15;
+            inpPrecio.BackColor = SystemColors.Control;
+            inpPrecio.BorderStyle = BorderStyle.FixedSingle;
+            inpPrecio.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            inpPrecio.Location = new Point(119, 330);
+            inpPrecio.Name = "inpPrecio";
+            inpPrecio.Size = new Size(166, 22);
+            inpPrecio.TabIndex = 15;
             // 
             // label7
             // 
@@ -170,14 +171,14 @@
             lbl_ImagenNA.TabIndex = 17;
             lbl_ImagenNA.Text = "Imagen:";
             // 
-            // input_CodigoNA
+            // txtCodigo
             // 
-            input_CodigoNA.BackColor = Color.White;
-            input_CodigoNA.BorderStyle = BorderStyle.FixedSingle;
-            input_CodigoNA.Location = new Point(119, 83);
-            input_CodigoNA.Name = "input_CodigoNA";
-            input_CodigoNA.Size = new Size(423, 23);
-            input_CodigoNA.TabIndex = 20;
+            txtCodigo.BackColor = Color.White;
+            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.Location = new Point(119, 83);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(423, 23);
+            txtCodigo.TabIndex = 20;
             // 
             // lbl_CodigoNA
             // 
@@ -204,6 +205,7 @@
             // 
             // CbMarcas
             // 
+            CbMarcas.DropDownStyle = ComboBoxStyle.DropDownList;
             CbMarcas.FormattingEnabled = true;
             CbMarcas.Location = new Point(119, 244);
             CbMarcas.Name = "CbMarcas";
@@ -212,6 +214,7 @@
             // 
             // CbCategoria
             // 
+            CbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             CbCategoria.FormattingEnabled = true;
             CbCategoria.Location = new Point(366, 244);
             CbCategoria.Name = "CbCategoria";
@@ -226,18 +229,18 @@
             Controls.Add(CbCategoria);
             Controls.Add(CbMarcas);
             Controls.Add(btn_BuscarNA);
-            Controls.Add(input_CodigoNA);
+            Controls.Add(txtCodigo);
             Controls.Add(lbl_CodigoNA);
             Controls.Add(lbl_ImagenNA);
             Controls.Add(label7);
-            Controls.Add(input_PrecioNA);
+            Controls.Add(inpPrecio);
             Controls.Add(lbl_PrecioNA);
             Controls.Add(label5);
             Controls.Add(lbl_MarcaNA);
-            Controls.Add(input_DescripcionNA);
+            Controls.Add(inpDescripcion);
             Controls.Add(lbl_DescripcionNA);
             Controls.Add(lbl_NuevoArticulo);
-            Controls.Add(input_NombreNA);
+            Controls.Add(txtNombre);
             Controls.Add(btnAgregarNA);
             Controls.Add(lbl_NombreNA);
             MaximizeBox = false;
@@ -254,17 +257,17 @@
 
         private Label lbl_NombreNA;
         private Button btnAgregarNA;
-        private TextBox input_NombreNA;
+        private TextBox txtNombre;
         private Label lbl_NuevoArticulo;
         private Label lbl_DescripcionNA;
-        private TextBox input_DescripcionNA;
+        private TextBox inpDescripcion;
         private Label lbl_MarcaNA;
         private Label label5;
         private Label lbl_PrecioNA;
-        private TextBox input_PrecioNA;
+        private TextBox inpPrecio;
         private Label label7;
         private Label lbl_ImagenNA;
-        private TextBox input_CodigoNA;
+        private TextBox txtCodigo;
         private Label lbl_CodigoNA;
         private Button btn_BuscarNA;
         private ComboBox CbMarcas;

@@ -67,5 +67,25 @@ namespace servicio
 
         }
 
+        public void agregar(articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("INSERT INTO articulos (codigo, nombre, descripcion, idMarca, idCategoria, precio) VALUES ('" + art.Codigo + "', '" + art.Nombre + "', '" + art.Descripcion + "', " + art.Marca.Id + ", " + art.Categoria.Id + ", " + art.Precio + ")");
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+
+        }
+
     }
 }
