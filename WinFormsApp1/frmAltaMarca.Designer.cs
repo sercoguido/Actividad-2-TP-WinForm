@@ -56,9 +56,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(210, 74);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 5;
-            label2.Text = "Nombre ";
+            label2.Text = "Nombre :";
             // 
             // lbl_Marca
             // 
@@ -74,12 +74,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.Disable;
             ClientSize = new Size(478, 194);
             Controls.Add(btnAgregarMarca);
             Controls.Add(txtNombre);
             Controls.Add(label2);
             Controls.Add(lbl_Marca);
             Name = "frmAltaMarca";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAltaMarca";
             Load += frmAltaMarca_Load;
             ResumeLayout(false);

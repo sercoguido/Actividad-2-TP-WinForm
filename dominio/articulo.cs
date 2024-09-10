@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -11,7 +12,9 @@ namespace dominio
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        [DisplayName("Código")]//Para que en GridView se pueda visualizar con acento
         public string Codigo { get; set; }
+        [DisplayName("Descripción")]//Para que en GridView se pueda visualizar con acento
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
         public Categoria Categoria { get; set; }

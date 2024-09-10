@@ -147,8 +147,11 @@
             // dgvArticulos
             // 
             dgvArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvArticulos.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvArticulos.Location = new Point(14, 138);
+            dgvArticulos.MultiSelect = false;
             dgvArticulos.Name = "dgvArticulos";
+            dgvArticulos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvArticulos.Size = new Size(496, 348);
             dgvArticulos.TabIndex = 13;
             // 

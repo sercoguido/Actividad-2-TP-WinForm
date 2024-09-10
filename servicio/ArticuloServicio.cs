@@ -50,7 +50,7 @@ namespace servicio
                     aux.Categoria = new Categoria();
                     aux.Categoria = !lector.IsDBNull(5) ? new Categoria { Descripcion = (string)lector["CategoriaNombre"] }: null;
                     aux.Precio = Math.Round(lector.GetDecimal(6), 2);  // Redondear a 2 decimales
-                    aux.Imagen = (string)lector["imagenurl"];
+                    aux.Imagen = !lector.IsDBNull(7) ? (string)lector["imagenurl"] : null; 
 
                     lista.Add(aux);
                 }

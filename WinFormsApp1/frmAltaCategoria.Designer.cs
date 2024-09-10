@@ -50,9 +50,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(204, 81);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 1;
-            label2.Text = "Nombre ";
+            label2.Text = "Nombre :";
             // 
             // txtNombre
             // 
@@ -82,6 +82,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmAltaCategoria";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAltaCategoria";
             Load += frmAltaCategoria_Load;
             ResumeLayout(false);
