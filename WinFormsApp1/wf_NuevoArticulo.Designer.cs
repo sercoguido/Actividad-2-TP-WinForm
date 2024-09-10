@@ -42,9 +42,11 @@
             lbl_ImagenNA = new Label();
             txtCodigo = new TextBox();
             lbl_CodigoNA = new Label();
-            btn_BuscarNA = new Button();
             CbMarcas = new ComboBox();
             CbCategoria = new ComboBox();
+            TbUrlImagen = new TextBox();
+            PbImagen = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)PbImagen).BeginInit();
             SuspendLayout();
             // 
             // lbl_NombreNA
@@ -165,11 +167,11 @@
             // 
             lbl_ImagenNA.AutoSize = true;
             lbl_ImagenNA.Font = new Font("Tahoma", 9.75F);
-            lbl_ImagenNA.Location = new Point(62, 285);
+            lbl_ImagenNA.Location = new Point(38, 285);
             lbl_ImagenNA.Name = "lbl_ImagenNA";
-            lbl_ImagenNA.Size = new Size(55, 16);
+            lbl_ImagenNA.Size = new Size(75, 16);
             lbl_ImagenNA.TabIndex = 17;
-            lbl_ImagenNA.Text = "Imagen:";
+            lbl_ImagenNA.Text = "Url Imagen:";
             // 
             // txtCodigo
             // 
@@ -190,19 +192,6 @@
             lbl_CodigoNA.TabIndex = 19;
             lbl_CodigoNA.Text = "Codigo:";
             // 
-            // btn_BuscarNA
-            // 
-            btn_BuscarNA.BackColor = Color.White;
-            btn_BuscarNA.FlatAppearance.BorderColor = Color.Black;
-            btn_BuscarNA.FlatStyle = FlatStyle.Flat;
-            btn_BuscarNA.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_BuscarNA.Location = new Point(119, 282);
-            btn_BuscarNA.Name = "btn_BuscarNA";
-            btn_BuscarNA.Size = new Size(75, 23);
-            btn_BuscarNA.TabIndex = 21;
-            btn_BuscarNA.Text = "Buscar";
-            btn_BuscarNA.UseVisualStyleBackColor = false;
-            // 
             // CbMarcas
             // 
             CbMarcas.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -221,14 +210,33 @@
             CbCategoria.Size = new Size(166, 23);
             CbCategoria.TabIndex = 25;
             // 
+            // TbUrlImagen
+            // 
+            TbUrlImagen.BackColor = Color.White;
+            TbUrlImagen.BorderStyle = BorderStyle.FixedSingle;
+            TbUrlImagen.Location = new Point(119, 282);
+            TbUrlImagen.Name = "TbUrlImagen";
+            TbUrlImagen.Size = new Size(423, 23);
+            TbUrlImagen.TabIndex = 26;
+            TbUrlImagen.Leave += TbUrlImagen_Leave;
+            // 
+            // PbImagen
+            // 
+            PbImagen.Location = new Point(119, 367);
+            PbImagen.Name = "PbImagen";
+            PbImagen.Size = new Size(122, 87);
+            PbImagen.TabIndex = 27;
+            PbImagen.TabStop = false;
+            // 
             // wf_NuevoArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(604, 466);
+            Controls.Add(PbImagen);
+            Controls.Add(TbUrlImagen);
             Controls.Add(CbCategoria);
             Controls.Add(CbMarcas);
-            Controls.Add(btn_BuscarNA);
             Controls.Add(txtCodigo);
             Controls.Add(lbl_CodigoNA);
             Controls.Add(lbl_ImagenNA);
@@ -249,6 +257,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "Gestion Catalogo [Nuevo Articulo]";
             Load += Form2_Load_1;
+            ((System.ComponentModel.ISupportInitialize)PbImagen).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -269,8 +278,9 @@
         private Label lbl_ImagenNA;
         private TextBox txtCodigo;
         private Label lbl_CodigoNA;
-        private Button btn_BuscarNA;
         private ComboBox CbMarcas;
         private ComboBox CbCategoria;
+        private TextBox TbUrlImagen;
+        private PictureBox PbImagen;
     }
 }

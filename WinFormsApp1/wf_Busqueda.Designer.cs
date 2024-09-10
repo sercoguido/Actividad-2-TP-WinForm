@@ -39,7 +39,9 @@
             lbl_NombreBusqueda = new Label();
             lbl_TituloBusqueda = new Label();
             dgvArticulos = new DataGridView();
+            PbArticulo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvArticulos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PbArticulo).BeginInit();
             SuspendLayout();
             // 
             // lb_BusquedaMarca
@@ -154,13 +156,24 @@
             dgvArticulos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvArticulos.Size = new Size(496, 348);
             dgvArticulos.TabIndex = 13;
+            dgvArticulos.SelectionChanged += dgvArticulos_SelectionChanged;
+            // 
+            // PbArticulo
+            // 
+            PbArticulo.Location = new Point(519, 169);
+            PbArticulo.Name = "PbArticulo";
+            PbArticulo.Size = new Size(257, 256);
+            PbArticulo.SizeMode = PictureBoxSizeMode.StretchImage;
+            PbArticulo.TabIndex = 14;
+            PbArticulo.TabStop = false;
             // 
             // wf_Busqueda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(526, 498);
+            ClientSize = new Size(784, 498);
+            Controls.Add(PbArticulo);
             Controls.Add(dgvArticulos);
             Controls.Add(lbl_TituloBusqueda);
             Controls.Add(lbl_NombreBusqueda);
@@ -173,12 +186,13 @@
             Controls.Add(lb_BusquedaCategoria);
             Controls.Add(lb_BusquedaMarca);
             MaximizeBox = false;
-            MaximumSize = new Size(542, 537);
+            MaximumSize = new Size(800, 537);
             Name = "wf_Busqueda";
             StartPosition = FormStartPosition.CenterParent;
             Text = "wf_Busqueda";
             Load += wf_Busqueda_Load;
             ((System.ComponentModel.ISupportInitialize)dgvArticulos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PbArticulo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -195,5 +209,6 @@
         private Label lbl_NombreBusqueda;
         private Label lbl_TituloBusqueda;
         private DataGridView dgvArticulos;
+        private PictureBox PbArticulo;
     }
 }

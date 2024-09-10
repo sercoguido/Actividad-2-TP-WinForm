@@ -120,5 +120,10 @@ namespace GestionCatalogo
         {
 
         }
+
+        private void TbUrlImagen_Leave(object sender, EventArgs e)
+        {
+        }
+
     }
 }

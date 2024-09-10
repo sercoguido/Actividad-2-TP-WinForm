@@ -15,6 +15,7 @@ namespace WinFormsApp1
 {
     public partial class wf_Busqueda : Form
     {
+        private List<articulo> listaArticulo;
         public wf_Busqueda()
         {
             InitializeComponent();
@@ -23,7 +24,29 @@ namespace WinFormsApp1
         private void wf_Busqueda_Load(object sender, EventArgs e)
         {
             ArticuloServicio servicio = new ArticuloServicio();
-            dgvArticulos.DataSource = servicio.listar();
+            listaArticulo = servicio.listar();
+            dgvArticulos.DataSource = listaArticulo;
+
+            cargarImagen(listaArticulo[0].Imagen);
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            articulo seleccionado = (articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.Imagen);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                PbArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                PbArticulo.Load("https://uning.es/wp-content/uploads/2016/08/ef3-placeholder-image.jpg");
+            }
+
         }
     }
 }
