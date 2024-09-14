@@ -48,5 +48,10 @@ namespace WinFormsApp1
             }
 
         }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

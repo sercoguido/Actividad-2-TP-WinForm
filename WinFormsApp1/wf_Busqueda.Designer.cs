@@ -156,6 +156,7 @@
             dgvArticulos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvArticulos.Size = new Size(496, 348);
             dgvArticulos.TabIndex = 13;
+            dgvArticulos.CellContentClick += dgvArticulos_CellContentClick;
             dgvArticulos.SelectionChanged += dgvArticulos_SelectionChanged;
             // 
             // PbArticulo
